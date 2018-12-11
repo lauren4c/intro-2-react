@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Assignment 2748</title>
+  </head>
+
+  <body>
+     <div id="app"></div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+     <script type="text/babel">
+
+ class Greeting extends React.Component {
+   constructor(props){
+           super(props);
+           this.state = {
+             number: 5
+           }
+         }
+        render() {
+          return (
+            <div>
+              <h1>Welcome, {this.props.name}!</h1>
+               <p>You are in week {this.state.number} of the Bloc Program.</p>
+            </div>
+          );
+        }
+      }
+
+
+
+ReactDOM.render(
+<Greeting name="Lauren"/>, 
+document.getElementById('app')
+);
+     </script>
+   </body>
+</html>
